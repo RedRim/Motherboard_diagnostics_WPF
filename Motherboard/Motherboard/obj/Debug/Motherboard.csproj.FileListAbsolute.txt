@@ -1,0 +1,15 @@
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\bin\Debug\Motherboard.exe.config
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\bin\Debug\Motherboard.exe
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\bin\Debug\Motherboard.pdb
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.csproj.AssemblyReference.cache
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\MainWindow.g.cs
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\App.g.cs
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard_MarkupCompile.cache
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard_MarkupCompile.lref
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\MainWindow.baml
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.g.resources
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.Properties.Resources.resources
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.csproj.GenerateResource.cache
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.csproj.CoreCompileInputs.cache
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.exe
+I:\Степан\Programing\ЭВМ\Motherboard\Motherboard\obj\Debug\Motherboard.pdb

@@ -1,0 +1,67 @@
+﻿<Window x:Class="Motherboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Motherboard"
+        mc:Ignorable="d" Height="450" Width="800" Title="ASUS Pro B760M-C-CSM" Icon="/ASUS-Pro-B760M-C-CSM.jpeg"
+        xmlns:converters="clr-namespace:Motherboard">
+    <Grid x:Name="MainRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="711*"/>
+            <ColumnDefinition Width="24*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ASUS" HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="413" Source="/ASUS-Pro-B760M-C-CSM.jpeg" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="1" x:Name="textLabel" HorizontalAlignment="Left" Margin="457,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" x:Name="textProblem" HorizontalAlignment="Left" Margin="500,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="btnCMOS" Grid.Column="1" Content="CMOS" HorizontalAlignment="Left" Margin="29,321,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnLine3" Grid.Column="1" Content="Line3.3" HorizontalAlignment="Left" Margin="355,84,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnLine5" Grid.Column="1" Content="Line5" HorizontalAlignment="Left" Margin="355,109,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnLine12" Grid.Column="1" Content="Line12" HorizontalAlignment="Left" Margin="355,134,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnBIOS" Grid.Column="1" Content="BIOS" HorizontalAlignment="Left" Margin="290,359,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRTC" Content="RTC" HorizontalAlignment="Left" Margin="46,279,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnChoke1" Grid.Column="1" Content="Choke1" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnGFX" Content="GFX" HorizontalAlignment="Left" Margin="101,250,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Button x:Name="btnChoke2" Grid.Column="1" Content="Choke2" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnChoke3" Grid.Column="1" Content="Choke3" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnChoke4" Grid.Column="1" Content="Choke4" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnChoke5" Grid.Column="1" Content="Choke5" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnChoke6" Grid.Column="1" Content="Choke6" HorizontalAlignment="Left" Margin="75,50,0,0" VerticalAlignment="Top" Height="23" Width="46"/>
+        <Button x:Name="btnChoke7" Grid.Column="1" Content="Choke7" HorizontalAlignment="Left" Margin="126,52,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="btnP1dp" Grid.Column="1" Content="P1 d+" HorizontalAlignment="Left" Margin="290,184,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnP1dm" Grid.Column="1" Content="P1 d-" HorizontalAlignment="Left" Margin="292,212,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnP2dp" Grid.Column="1" Content="P2 d+" HorizontalAlignment="Left" Margin="351,179,0,0" VerticalAlignment="Top" />
+        <Button x:Name="btnP2dm" Grid.Column="1" Content="P2 d-" HorizontalAlignment="Left" Margin="351,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.461,3.456"/>
+
+        <CheckBox x:Name="cbGND" Grid.Column="1" Content="GND" HorizontalAlignment="Left" Margin="355,17,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRl3" Grid.Column="1" Content="Rl3" HorizontalAlignment="Left" Margin="404,86,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRl5" Grid.Column="1" Content="Rl5" HorizontalAlignment="Left" Margin="404,111,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRl12" Grid.Column="1" Content="Rl12" HorizontalAlignment="Left" Margin="404,134,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRcmos" Grid.Column="1" Content="Rlcmos" HorizontalAlignment="Left" Margin="72,323,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRbios" Grid.Column="1" Content="Rlbios" HorizontalAlignment="Left" Margin="290,384,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRrtc" Content="Rlrtc" HorizontalAlignment="Left" Margin="32,304,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="cbRgfx" Content="Rlgfx" HorizontalAlignment="Left" Margin="128,252,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnCheckR" Grid.Column="1" Content="Check Resistance" HorizontalAlignment="Left" Margin="378,274,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cb" IsEditable="True" IsReadOnly="True" Text="Выберите неисправность" Grid.Column="1" HorizontalAlignment="Left" Margin="425,359,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="cb_SelectionChanged">
+            <ComboBoxItem>Неправильное напряжение линии 3.3V</ComboBoxItem>
+            <ComboBoxItem>Неправильное напряжение линии 5V</ComboBoxItem>
+            <ComboBoxItem>Неправильное напряжение линии 12V</ComboBoxItem>
+            <ComboBoxItem>Нет сигнала на BIOS</ComboBoxItem>
+            <ComboBoxItem>Нет сигнала на RTC</ComboBoxItem>
+            <ComboBoxItem>Обрыв на линиях разъема видеокарты</ComboBoxItem>
+            <ComboBoxItem>Неправильное напряжение CMOS</ComboBoxItem>
+            <ComboBoxItem>Неисправен южный мост</ComboBoxItem>
+            <ComboBoxItem>Короткое замыкание на линии 12V</ComboBoxItem>
+            <ComboBoxItem>Различаются осцилограммы на дроселях</ComboBoxItem>
+        </ComboBox>
+        <Image x:Name="BIOSImage" Grid.Column="1" HorizontalAlignment="Left" Height="79" Margin="422,179,0,0" VerticalAlignment="Top" Width="244" Source="/bios.png" Visibility="Hidden"/>
+        <Image x:Name="SINImage" Grid.Column="1" HorizontalAlignment="Left" Height="108" Margin="486,168,0,0" VerticalAlignment="Top" Width="161" Visibility="Hidden" Source="/sin.png"/>
+        <Image x:Name="RTCImage" Grid.Column="1" HorizontalAlignment="Left" Height="112" Margin="486,166,0,0" VerticalAlignment="Top" Width="195" Visibility="Hidden" Source="/rtc.png" />
+        <Image x:Name="NoSignalImage" Grid.Column="1" HorizontalAlignment="Left" Height="112" Margin="486,166,0,0" VerticalAlignment="Top" Width="195" Visibility="Hidden" Source="/nosignal.png" />
+
+    </Grid>
+
+</Window>
